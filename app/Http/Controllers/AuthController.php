@@ -12,11 +12,13 @@ class AuthController extends Controller
 {
     public function register(RegisterRequest $registerRequest)
     {
+
         $validated = $registerRequest->validated();
 
         $user = User::create($validated);
-
+            
         return $user;
+
     }
 
     public function login(LoginRequest $loginRequest)

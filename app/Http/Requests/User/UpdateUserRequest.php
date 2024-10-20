@@ -28,7 +28,10 @@ class UpdateUserRequest extends FormRequest
             'surname' => ['sometimes', 'required', 'string', 'min:3', 'max:50'],
             'email' => ['sometimes', 'required', 'string', 'email', 'max:255', 'unique:users,email,' . $userId],
             'password' => ['sometimes', 'required', 'string', 'min:6'],
-            'password_confirmation' => ['required', 'same:password']
+            'password_confirmation' => ['required', 'same:password'],
+            'image_path' => ['sometimes', 'required', 'string','max:255'],
+            'balance' => ['sometimes', 'required', 'string','max:255'],
+            'level' => ['sometimes', 'required', 'string','max:255'],
         ];
     }
 }

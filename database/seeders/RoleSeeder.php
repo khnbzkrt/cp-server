@@ -16,6 +16,5 @@ class RoleSeeder extends Seeder
     {
         Role::create(['name' => RoleEnum::USER, 'guard_name' => 'api']);
         Role::create(['name' => RoleEnum::ADMIN, 'guard_name' => 'api']);
-        Role::create(['name' => RoleEnum::CUSTOMER, 'guard_name' => 'api']);
     }
 }
